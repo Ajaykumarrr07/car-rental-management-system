@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarRent - Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            background-image: url("./customerImage.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* backdrop-filter: blur(4px); */
+        }
+
+        @keyframes bgMove {
+            0% { background-position: top left; }
+            100% { background-position: bottom right; }
+        }
+
+        .first {
+            width: 350px;
+            text-align: center;
+            padding: 40px 35px;
+
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 18px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.3);
+
+            animation: fadeIn 0.7s ease;
+        }
+
+        h1 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            margin: 12px 0;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .admin {
+            background: #007bff;
+            color: white;
+        }
+
+        .admin:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .customer {
+            background: #28a745;
+            color: white;
+        }
+
+        .customer:hover {
+            background: #1f7b34;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="first">
+        <h1>Welcome To Car Rent's</h1>
+
+        <!-- Available Cars -->
+        <form action="allavilablecars">
+            <button type="submit" class="btn admin">Available Cars</button>
+        </form>
+
+        <!-- Booking Page -->
+        <a href="customer.html">
+            <button class="btn customer" type="button">Booking</button>
+        </a>
+    </div>
+
+</body>
+</html>

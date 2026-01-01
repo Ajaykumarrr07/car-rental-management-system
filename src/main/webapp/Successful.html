@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #a8e063, #56ab2f);
+            font-family: "Poppins", sans-serif;
+        }
+
+        .msg-box {
+            background: white;
+            padding: 40px 55px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+            animation: pop 0.6s ease;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.6); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .tick {
+            font-size: 70px;
+            color: #28a745;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(40,167,69,0.5);
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(40,167,69,0.5); }
+            100% { text-shadow: 0 0 15px rgba(40,167,69,1); }
+        }
+
+        .msg {
+            font-size: 26px;
+            font-weight: 600;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="msg-box">
+        <div class="tick">✔</div>
+        <div class="msg">Successfully Completed</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarRent - Home</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+             font-family: "Poppins", Arial, sans-serif;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            background-image: url("./index.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 50px;
+            width: 360px;
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            animation: fadeIn 0.6s ease-in-out;
+             
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #1e3c72;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            font-size: 17px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .admin {
+            background: #007bff;
+        }
+        .admin:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .customer {
+            background: #28a745;
+        }
+        .customer:hover {
+            background: #1d7e34;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🚗 CarRent</h1>
+        <a href="Admin.html" class="btn admin">Admin Panel</a>
+        <a href="customerHome.html" class="btn customer">Customer Panel</a>
+    </div>
+
+</body>
+</html>

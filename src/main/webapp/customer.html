@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Booking Form</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #2a5298, #4ca1af);
+            background-size: 300% 300%;
+            animation: bgMove 8s infinite alternate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes bgMove {
+            0% { background-position: left; }
+            100% { background-position: right; }
+        }
+
+        .container {
+            width: 380px;
+            padding: 35px 30px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 0.7s ease;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        label {
+            font-size: 15px;
+            color: white;
+            font-weight: 600;
+            display: block;
+            margin-top: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 10px;
+            border: none;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            transition: 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            background: white;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.7);
+            transform: scale(1.02);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            margin-top: 18px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>🚗 Car Booking</h2>
+
+    <form action="customer" method="post">
+
+        <label>Car ID</label>
+        <input type="number" name="carid" required>
+
+        <label>Customer Name</label>
+        <input type="text" name="custname" required>
+
+        <label>Phone Number</label>
+        <input type="tel" name="phno" required>
+
+        <label>From Date</label>
+        <input type="date" name="fromDate" required>
+
+        <label>To Date</label>
+        <input type="date" name="toDate" required>
+
+        <button type="submit">Book Now</button>
+
+    </form>
+</div>
+
+</body>
+</html>

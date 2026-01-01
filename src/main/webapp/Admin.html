@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - CarRent</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", Arial, sans-serif;
+            height: 100vh;
+            background: rgba(0,0,0,0.5);
+            background-image: url("./ChatGPT\ Image\ Nov\ 19\,\ 2025\,\ 01_16_52\ PM.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .container {
+            width: 420px;
+            padding: 40px 35px;
+            border-radius: 18px;
+            text-align: center;
+
+            /* GLASS EFFECT */
+            background: rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+
+            /* Smooth shadow */
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+
+            animation: fadeIn 0.7s ease-in-out;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 30px;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 15px;
+            margin: 12px 0;
+            font-size: 17px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .addcar {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            color: #fff;
+        }
+        .addcar:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        .seeall {
+            background: linear-gradient(45deg, #28a745, #1d7e34);
+            color: #fff;
+        }
+        .seeall:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* Button with orange gradient */
+        .booking {
+            background: linear-gradient(45deg, #ff9800, #e68900);
+            color: #fff;
+        }
+        .booking:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🚗 Admin Panel</h1>
+
+        <button class="btn addcar" onclick="window.location.href='addCars.html'">Add Car</button>
+
+        <form action="allcars" method="post">
+            <button class="btn seeall" type="submit">See All Cars</button>
+        </form>
+
+        <form action="allavilablecars" method="get">
+            <button class="btn seeall" type="submit">Available Cars</button>
+        </form>
+
+        <form action="seeallbooking" method="get">
+            <button class="btn booking" type="submit">See All Booking</button>
+        </form>
+    </div>
+
+</body>
+</html>

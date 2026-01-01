@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Poppins", Arial, sans-serif;
+            background: linear-gradient(135deg, #d4fc79, #96e6a1);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .msg-box {
+            background: white;
+            padding: 40px 60px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            animation: pop 0.7s ease-in-out;
+        }
+
+        .icon {
+            font-size: 70px;
+            color: #28a745;
+            animation: pulse 1.3s infinite;
+        }
+
+        h2 {
+            margin-top: 15px;
+            font-size: 30px;
+            color: #155724;
+            letter-spacing: 1px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="msg-box">
+        <div class="icon">✔</div>
+        <h2>Successfully Entered</h2>
+    </div>
+
+</body>
+</html>
